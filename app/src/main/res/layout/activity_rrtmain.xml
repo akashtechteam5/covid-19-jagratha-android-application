@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ioss.covid.viewModel.RRTMainViewModel" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.RRTMainActivity">
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userRegBT"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:onClick="onClickNewRegister"
+        app:cardCornerRadius="@dimen/margin_default"
+        android:layout_margin="@dimen/margin_default"
+        app:cardBackgroundColor="@color/main_item_color">
+        <TextView
+            android:id="@+id/newUserTV"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/new_user_registration"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_semi_large"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_default"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCV"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_default"
+        android:layout_margin="@dimen/margin_default"
+        app:cardBackgroundColor="@color/main_item_color">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin_default">
+
+        <EditText
+            android:id="@+id/mobileET"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@={viewModel.mobile}"
+            android:inputType="number"
+            android:hint="Phone Number"
+            android:maxLength="10"
+            android:drawableRight="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size_semi_large"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_default"/>
+            <TextView
+                android:id="@+id/serachBT"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:onClick="onClickSearch"
+                android:textColor="@android:color/white"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@drawable/bg_button_basic_curved"
+                android:text="@string/search"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5" />
+
+</LinearLayout>
+</layout>

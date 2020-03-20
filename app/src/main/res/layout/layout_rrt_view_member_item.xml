@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default"
+    android:minHeight="40dp">
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_width="0dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_semi_large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/statusCV"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/ageTV"
+        android:layout_height="wrap_content"
+        android:text="age : 45"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        app:layout_constraintRight_toLeftOf="@+id/statusCV"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/statusCV"
+            android:layout_height="12dp"
+            android:layout_width="12dp"
+            app:cardCornerRadius="6dp"
+            app:cardBackgroundColor="#4BD601"
+            android:layout_marginRight="@dimen/margin_default"
+        app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

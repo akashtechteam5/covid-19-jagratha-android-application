@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ioss.covid.viewModel.RegistrationViewModel"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.RegistrationActivity">
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            tools:context=".view.RegistrationActivity">
+
+            <EditText
+                android:id="@+id/mobileET"
+                style="@style/style_et_reg"
+                android:hint="@string/mobile_number"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="10"
+                android:text="@={viewModel.mobile}" />
+
+            <EditText
+                android:id="@+id/passwordET"
+                style="@style/style_et_reg"
+                android:hint="@string/password"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:text="@={viewModel.password}" />
+
+            <EditText
+                android:id="@+id/confirmPasswordET"
+                style="@style/style_et_reg"
+                android:hint="@string/confirm_password"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                android:text="@={viewModel.confirm_password}" />
+
+            <EditText
+                    android:id="@+id/nameET"
+                    style="@style/style_et_reg"
+                    android:hint="@string/name"
+                    android:background="@drawable/bg_square_stroke"
+                    android:minHeight="@dimen/button_height"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:text="@={viewModel.name}" />
+
+                <EditText
+                    android:id="@+id/ageET"
+                    style="@style/style_et_reg"
+                    android:hint="@string/age"
+                    android:background="@drawable/bg_square_stroke"
+                    android:maxLength="3"
+                    android:minHeight="@dimen/button_height"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:text="@={viewModel.age}" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_square_stroke"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default">
+
+                <Spinner
+                    android:id="@+id/genderSP"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/button_height"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_square_stroke"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default">
+                <Spinner
+                    android:id="@+id/stateSP"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/button_height"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_square_stroke"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default">
+            <Spinner
+                android:id="@+id/districtSP"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:minHeight="@dimen/button_height"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_square_stroke"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default">
+                <Spinner
+                    android:id="@+id/panchayathSP"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/button_height"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_square_stroke"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginLeft="@dimen/margin_default">
+                <Spinner
+                    android:id="@+id/chcSP"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/button_height"/>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/addressET"
+                style="@style/style_et_reg"
+                android:hint="@string/address"
+                android:text="@={viewModel.address}"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/address_height" />
+
+            <EditText
+                android:id="@+id/mobile1ET"
+                style="@style/style_et_reg"
+                android:hint="@string/alternate_mobile_1"
+                android:inputType="number"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:text="@={viewModel.mobile1}"
+                android:singleLine="true"
+                android:maxLength="10" />
+            <EditText
+                android:id="@+id/mobile2ET"
+                style="@style/style_et_reg"
+                android:hint="@string/alternate_mobile_2"
+                android:inputType="number"
+                android:text="@={viewModel.mobile2}"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:singleLine="true"
+                android:maxLength="10" />
+            <EditText
+                android:id="@+id/mobile3ET"
+                style="@style/style_et_reg"
+                android:hint="@string/alternate_mobile_3"
+                android:inputType="number"
+                android:text="@={viewModel.mobile3}"
+                android:background="@drawable/bg_square_stroke"
+                android:minHeight="@dimen/button_height"
+                android:singleLine="true"
+                android:maxLength="10" />
+
+            <!--
+                        <EditText
+                            android:id="@+id/pinET"
+                            style="@style/style_et_reg"
+                            android:hint="@string/pin"
+                            android:background="@drawable/bg_square_stroke"
+                            android:maxLength="9"
+                            android:minHeight="@dimen/button_height"
+                            android:inputType="number"
+                            android:singleLine="true"/>
+            -->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/registerBT"
+        style="@style/style_bt_basic"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_basic_curved"
+        android:layout_marginBottom="25dp"
+        android:text="@string/register"
+        android:onClick="onClickRegister"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
+</layout>

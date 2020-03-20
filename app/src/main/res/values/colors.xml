@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#00574B</color>
+    <color name="colorLabel">#CE0825</color>
+    <color name="main_item_color">#9AE9E6E6</color>
+    <color name="symptoms_qn_bg">#9ADCEEFF</color>
+</resources>

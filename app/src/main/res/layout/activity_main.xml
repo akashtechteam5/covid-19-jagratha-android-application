@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ioss.covid.viewModel.UserDetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.UserDetailActivity">
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/symptomsBT"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:onClick="onClicksymptoms"
+            app:cardCornerRadius="@dimen/margin_default"
+            android:layout_margin="@dimen/margin_default"
+            app:cardBackgroundColor="@color/main_item_color">
+            <TextView
+                android:id="@+id/symptomsTV"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/symptoms"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_semi_large"
+                android:paddingTop="@dimen/padding_default"
+                android:paddingBottom="@dimen/padding_default"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/questionsBT"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:onClick="onClickQuestions"
+            app:cardCornerRadius="@dimen/margin_default"
+            android:layout_margin="@dimen/margin_default"
+            app:cardBackgroundColor="@color/main_item_color">
+            <TextView
+                android:id="@+id/questionsTV"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Questionnaire"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_semi_large"
+                android:paddingTop="@dimen/padding_default"
+                android:paddingBottom="@dimen/padding_default"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/rootBT"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:cardCornerRadius="@dimen/margin_default"
+            android:layout_margin="@dimen/margin_default"
+            app:cardBackgroundColor="@color/main_item_color">
+            <TextView
+                android:id="@+id/rootTV"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Routes"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_semi_large"
+                android:paddingTop="@dimen/padding_default"
+                android:paddingBottom="@dimen/padding_default"/>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+</layout>
